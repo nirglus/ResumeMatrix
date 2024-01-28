@@ -10,13 +10,12 @@ import { UserContext } from "../../context/User"
 function Auth() {
     const [isLoginMode, setIsLoginMode] = useState(true);
     const [formData, setFormData] = useState({});
-    const {user} = useContext(UserContext);
+    const {user, setUser} = useContext(UserContext);
     
     const handleToggle = () =>{
         setIsLoginMode(!isLoginMode);
     }
     const changeHandler = (e) =>{
-        console.log(e.target.name, e.target.value);
         setFormData({...formData, [e.target.name]: e.target.value});
     };
 
@@ -32,10 +31,6 @@ function Auth() {
 
     const submitHandler = async(e) =>{
         e.preventDefault();
-        console.log("Email:", formData.email);
-        console.log("Password:", formData.password);
-        console.log('Form Data:', formData);
-
         try{
             let userCard;
             if(isLoginMode) {
