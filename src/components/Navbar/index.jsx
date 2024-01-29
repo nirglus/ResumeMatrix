@@ -8,8 +8,8 @@ function Navbar() {
   return (
     <nav>
         <div className="logo">
-            {/* <img src={logo} alt="ResumeMatrix-Logo" /> */}
-            <h1>ResumeMatrix</h1>
+            {/* <img src={logoItem} alt="ResumeMatrix-Logo" /> */}
+            <h1>Resume<span className="matrix">Matrix</span></h1>
         </div>
         <div className="navItems">
             <Link to="/" style={{padding: "8px"}}>Home</Link>

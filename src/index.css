@@ -1,0 +1,6 @@
+:root{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --green: rgb(0, 135, 16);
+    --lightGreen: rgb(165, 225, 172);
+    --darkGray: rgb(133, 130, 130)
+}
