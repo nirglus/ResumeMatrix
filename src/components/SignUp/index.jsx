@@ -1,7 +1,7 @@
 function SignUp(props){
     return (
         <div className="loginCont">
-            <h2>Budget Tracker</h2>
+            <h2>ResumeMatrix</h2>
             <p>Register</p>
             <form className="authForm" onSubmit={props.submitHandler}>
                 <input
