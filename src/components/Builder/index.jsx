@@ -1,5 +1,13 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { currentYear, minimumInput } from "../../helpers/dates";
+import { db } from "../../config/firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
+import { UserContext } from "../../context/User";
+
 function Builder() {
+
+  const {currentUser} = useContext(UserContext);
+  const [usersResume, setUsersResume] = useState();
   const [resumeData, setResumeData] = useState({
     fullName: '',
     aboutMe: '',
@@ -26,6 +34,8 @@ const addField = (section) => {
 const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(resumeData);
+    const docRef = addDoc(collection(db, "resumes"), {...resumeData, userID: currentUser.id})
+    console.log("Resume has been added to 'resumes' with the ID:", docRef.id);
 };
 
 const removeField = (itemIndex, field) =>{
@@ -63,10 +73,10 @@ return (
                     <input type="text" value={experience.role} onChange={(e) => handleInputChange(e, index, 'role', 'workExperience')} required />
 
                     <label>From year:</label>
-                    <input type="text" value={experience.from} onChange={(e) => handleInputChange(e, index, 'from', 'workExperience')} required />
+                    <input type="text" value={experience.from} onChange={(e) => handleInputChange(e, index, 'from', 'workExperience')} min={minimumInput} max={currentYear} required />
 
                     <label>Till year:</label>
-                    <input type="text" value={experience.till} onChange={(e) => handleInputChange(e, index, 'till', 'workExperience')} required />
+                    <input type="text" value={experience.till} onChange={(e) => handleInputChange(e, index, 'till', 'workExperience')} min={minimumInput} max={currentYear} required />
                     <button onClick={() => removeField(index, "workExperience")}>Remove -</button>
                 </div>
             ))}
@@ -81,10 +91,10 @@ return (
                     <input type="text" value={education.learned} onChange={(e) => handleInputChange(e, index, 'learned', 'education')} required />
 
                     <label>From year:</label>
-                    <input type="number" value={education.from} onChange={(e) => handleInputChange(e, index, 'from', 'education')} required />
+                    <input type="number" value={education.from} onChange={(e) => handleInputChange(e, index, 'from', 'education')} min={minimumInput} max={currentYear} required />
 
                     <label>Till year:</label>
-                    <input type="number" value={education.till} onChange={(e) => handleInputChange(e, index, 'till', 'education')} required />
+                    <input type="number" value={education.till} onChange={(e) => handleInputChange(e, index, 'till', 'education')} min={minimumInput} max={currentYear} required />
                     <button onClick={() => removeField(index, "education")}>Remove -</button>
                 </div>
             ))}
