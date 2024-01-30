@@ -1,11 +1,11 @@
 import { db } from "../../config/firebaseConfig"
 import { useState, useContext, useEffect } from "react"
-import { collection, getDoc, getDocs, query, where } from "firebase/firestore"
+import { collection, getDocs, query, where } from "firebase/firestore"
 import { UserContext } from "../../context/User"
 import DisplayCard from "../DisplayCard";
 
 function Display() {
-  const {currentUser, user} = useContext(UserContext);
+  const {user} = useContext(UserContext);
   const [userResumes, setUserResumes] = useState([]);
 
   const getResumes = async (currentUser) =>{
