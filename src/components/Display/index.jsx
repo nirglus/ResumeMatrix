@@ -2,11 +2,11 @@ import { db } from "../../config/firebaseConfig"
 import { useState, useContext, useEffect } from "react"
 import { collection, getDoc, getDocs, query, where } from "firebase/firestore"
 import { UserContext } from "../../context/User"
+import DisplayCard from "../DisplayCard";
 
 function Display() {
   const {currentUser, user} = useContext(UserContext);
   const [userResumes, setUserResumes] = useState([]);
-  const [resumeData, setResumeData] = useState();
 
   const getResumes = async (currentUser) =>{
     const q = query(collection(db, "resumes"), where("userID", "==" , currentUser));
@@ -16,9 +16,9 @@ function Display() {
       console.log(querySnapshot);
       querySnapshot.forEach((doc) =>{
         console.log(doc.id, "=>", doc.data());
-        setResumeData(prevData => [...prevData, doc.data()]);
+        setUserResumes([...userResumes , doc.data()]);
       })
-      // console.log(querySnapshot);
+      console.log(userResumes);
 
     } catch (error) {
       console.error("Can not fetch to the db: ", error);
@@ -34,7 +34,9 @@ function Display() {
 
   return (
     <div>
-      
+      {userResumes.map((resume, index) =>{
+        return <DisplayCard resumeData={resume} key={index}/>
+      })}
     </div>
   )
 }
