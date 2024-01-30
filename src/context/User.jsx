@@ -38,7 +38,7 @@ export default function UserProvider({children}){
         if (user && user.id) {
           fetchCurrentUser(user.id);
         }
-        console.log(user);
+        console.log({user});
       }, [user]);
 
       const userAuth = getAuth();

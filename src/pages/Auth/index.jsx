@@ -42,7 +42,7 @@ function Auth() {
                 await addUserToDB(userCard.user);
             }
             setUser(userCard.user);
-            //  window.location.href = '/';
+             window.location.href = '/';
              } catch (error) {
               console.error("Error: ", error.message);
              }
