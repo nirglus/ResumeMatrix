@@ -34,7 +34,7 @@ const addField = (section) => {
 const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(resumeData);
-    const docRef = addDoc(collection(db, "resumes"), {...resumeData, userID: currentUser.id})
+    const docRef = await addDoc(collection(db, "resumes"), {...resumeData, userID: currentUser.id})
     console.log("Resume has been added to 'resumes' with the ID:", docRef.id);
 };
 
