@@ -6,12 +6,12 @@ import { db } from "../../config/firebaseConfig";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import { useRef } from "react";
+import "./Single.css";
 
 function Single() {
   
   let {id: resumeID} = useParams(); 
   const [resumeData, setResumeData] = useState();
-  
   const pdfRef = useRef();
   const downloadPDF = () =>{
     const input = pdfRef.current;
@@ -23,8 +23,8 @@ function Single() {
       const imgWidth = canvas.width;
       const imgHeight = canvas.height;
       const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
-      const imgX = (pdfWidth - imgWidth * ratio) / 2;
-      const imgY = 30;
+      const imgX = (pdfWidth - imgWidth * ratio);
+      const imgY = 0;
       pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
       pdf.save('resume.pdf');
     });
@@ -46,9 +46,9 @@ function Single() {
     console.log({resumeID});
   }, [resumeID])
   return (
-    <div>
+    <div className="singlePage">
       {resumeData ? (
-        <div ref={pdfRef}> 
+        <div ref={pdfRef} className="pdfContainer"> 
           <DisplayCard resumeData={resumeData} />
         </div>
       ): null}

@@ -1,0 +1,72 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.resumeDisplay{
+    width: 100%;
+    height: 29.7cm;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    border: solid 2px #000;
+}
+
+.personalDetailsDisp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 50px;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2; 
+    background-color: #1e6331;
+    color: #fff;
+}
+.nameDisplay{
+    font-size: 1.5em;
+}
+.decRow{
+    border-radius: 20px;
+    height: 5px;
+    width: 30px;
+    background-color: var(--darkGray);
+}
+.roleDisplay{
+    color: #c6c7c6;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.contactDisp{
+    margin-top: 40px;
+}
+.contactDisp p{
+    color: #c6c7c6;
+}
+
+.workDisp{
+    grid-column: 2 / span 1; 
+    grid-row: 1 / span 1; 
+    padding-top: 46px;
+}
+.workPlaceDisp{
+    font-weight: 700;
+}
+.workPlaceTimeDisp{
+    color: var(--darkGray);
+    margin-top: -5px;
+}
+.aboutDispP{
+    color: #1e6331;
+}
+
+.educationDisp{
+    grid-column: 2 / span 1; 
+    grid-row: 2 / span 1; 
+}
+.personalDetailsDisp i{
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 0 5px;
+    color: #1e6331;
+}

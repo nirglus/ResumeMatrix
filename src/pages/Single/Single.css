@@ -1,0 +1,34 @@
+.singlePage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+.singlePage button{
+    height: 80px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: var(--green);
+    font-size: 20px;
+    font-weight: 500;
+    border: 0;
+    box-shadow: 0 5px 17px -2px #5b5b5b;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.singlePage button:hover{
+    background-color: var(--darkGreen);
+    transform: translateY(-5px);
+}
+.singlePage button:active{
+    transform: translateY(0);
+}
+.pdfContainer{
+    width: 21cm;
+    height: 29.7cm;
+}
