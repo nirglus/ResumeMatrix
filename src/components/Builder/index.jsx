@@ -6,9 +6,10 @@ import { UserContext } from "../../context/User";
 
 function Builder() {
 
-  const {currentUser} = useContext(UserContext);
+  const {currentUser, setSubmitedResume, submitedResume} = useContext(UserContext);
   const [resumeData, setResumeData] = useState({
     fullName: '',
+    role: '',
     aboutMe: '',
     phone: '',
     email: '',
@@ -34,6 +35,8 @@ const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(resumeData);
     const docRef = await addDoc(collection(db, "resumes"), {...resumeData, userID: currentUser.id})
+    setSubmitedResume(true);
+    console.log({submitedResume});
     console.log("Resume has been added to 'resumes' with the ID:", docRef.id);
 };
 
@@ -50,7 +53,10 @@ return (
         <div className="personalInputs">
           <label htmlFor="fullName">Full Name:</label>
           <input type="text" id="fullName" name="fullName" value={resumeData.fullName} onChange={(e) => setResumeData({ ...resumeData, fullName: e.target.value })} required />
-
+          
+          <label htmlFor="role">Role:</label>
+          <input type="text" id="role" name="role" value={resumeData.role} onChange={(e) => setResumeData({ ...resumeData, role: e.target.value })} required />
+          
           <label htmlFor="aboutMe">About Me:</label>
           <textarea id="aboutMe" name="aboutMe" value={resumeData.aboutMe} onChange={(e) => setResumeData({ ...resumeData, aboutMe: e.target.value })} rows="4"></textarea>
 

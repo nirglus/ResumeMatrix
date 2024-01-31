@@ -6,7 +6,7 @@ import { UserContext } from "../../context/User"
 import DisplayCard from "../DisplayCard";
 
 function Display() {
-  const {user} = useContext(UserContext);
+  const {user, submitedResume, setSubmitedResume} = useContext(UserContext);
   const [userResumes, setUserResumes] = useState([]);
 
   const getResumes = async (currentUser) => {
@@ -21,7 +21,8 @@ function Display() {
             ...doc.data()
         }));
 
-        setUserResumes((prevResumes) => [...prevResumes, ...newResumes]);
+        setUserResumes(newResumes);
+        setSubmitedResume(false);
         console.log({ userResumes });
     } catch (error) {
         console.error("Can not fetch to the db: ", error);
@@ -33,7 +34,7 @@ function Display() {
       getResumes(user.id);
     }
  
-  },[user])
+  },[user, submitedResume])
 
 
   return (

@@ -9,6 +9,7 @@ export const UserContext = createContext({});
 export default function UserProvider({children}){
     const [user, setUser] = useState();
     const [currentUser, setCurrentUser] = useState(null);
+    const [submitedResume, setSubmitedResume] = useState(false)
 
     
     useEffect(() => {
@@ -56,7 +57,7 @@ export default function UserProvider({children}){
             });
         };
     return(
-       <UserContext.Provider value={{user, setUser, userSignOut, currentUser}}>
+       <UserContext.Provider value={{user, setUser, userSignOut, currentUser, submitedResume, setSubmitedResume}}>
         {children}
        </UserContext.Provider>
     )

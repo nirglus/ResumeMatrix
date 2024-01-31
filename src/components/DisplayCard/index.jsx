@@ -5,6 +5,7 @@ function DisplayCard({resumeData}) {
     <div className="resumeDisplay">
         <div className="personalDetailsDisp">
           <h1>{resumeData.fullName}</h1>
+          <p className="roleDisplay">{resumeData.role}</p>
             <div className="contactDisp">
               <p>Phone: {resumeData.phone}</p>
               <p>Email: {resumeData.email}</p>
