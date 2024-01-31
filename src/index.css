@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 :root{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     --green: rgb(0, 135, 16);
     --lightGreen: rgb(165, 225, 172);
-    --darkGray: rgb(133, 130, 130)
+    --darkGray: rgb(133, 130, 130);
+}
+body{
+    margin: 0;
+    padding: 0;
 }
 button{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
 }
