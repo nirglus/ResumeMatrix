@@ -21,7 +21,6 @@ function App() {
         <Route path="/resumes/:id" element={<Single />} />
      </Routes>
      <Footer />
-    
     </BrowserRouter>
     </>
   )

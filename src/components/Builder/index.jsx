@@ -7,7 +7,6 @@ import { UserContext } from "../../context/User";
 function Builder() {
 
   const {currentUser} = useContext(UserContext);
-  const [usersResume, setUsersResume] = useState();
   const [resumeData, setResumeData] = useState({
     fullName: '',
     aboutMe: '',
