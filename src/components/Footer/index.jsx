@@ -1,10 +1,9 @@
-
+import "./Footer.css";
+import { currentYear } from "../../helpers/dates";
 
 function Footer() {
   return (
-    <footer>
-        Footer
-    </footer>
+    <footer>ResumeMatrix © {currentYear} </footer>
   )
 }
 

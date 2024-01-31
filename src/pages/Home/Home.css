@@ -11,7 +11,9 @@
 .homeTop h1{
     font-size: 2.6em;
 }
-.homeTop button{
+.homeTop a{
+    display: grid;
+    place-content: center;
     height: 80px;
     width: 300px;
     border-radius: 10px;
@@ -20,18 +22,16 @@
     font-weight: 500;
     border: 0;
     box-shadow: 0 5px 17px -2px #5b5b5b;
-    transition: 0.3s;
-}
-.homeTop button a{
     color: #fff;
     text-decoration: none;
+    transition: 0.3s;
 }
-.homeTop button:hover{
-    background-color: var(--lightGreen);
-    color: var(--green);
+
+.homeTop a:hover{
+    background-color: var(--darkGreen);
     transform: translateY(-5px);
 }
-.homeTop button:active{
+.homeTop a:active{
     transform: translateY(0);
 }
 

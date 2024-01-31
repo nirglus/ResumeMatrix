@@ -1,0 +1,8 @@
+footer{
+    background: rgb(30,99,49);
+    background: linear-gradient(306deg, rgba(30,99,49,1) 0%, rgba(27,137,45,1) 53%, rgba(2,78,11,1) 100%);
+    padding: 50px;
+    display: grid;
+    place-content: center;
+    color: #fff;
+}

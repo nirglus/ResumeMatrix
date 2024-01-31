@@ -13,8 +13,8 @@ function Home() {
           <li>Dozens of HR approved templates</li>
           <li>Create your winning resume in just 15 minutes</li>
         </ul>
-        <button>{user? (
-        <Link to="/resume">Create a resume!</Link>) : (<Link to="/login">Try it out!</Link>)}</button>
+        {user? (
+        <Link to="/resume">Create a resume!</Link>) : (<Link to="/login">Try it out!</Link>)}
       </div>
   )
 }
