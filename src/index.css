@@ -4,3 +4,6 @@
     --lightGreen: rgb(165, 225, 172);
     --darkGray: rgb(133, 130, 130)
 }
+button{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

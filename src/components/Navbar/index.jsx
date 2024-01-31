@@ -15,7 +15,7 @@ function Navbar() {
             <Link to="/" style={{padding: "8px"}}>Home</Link>
             <Link to="/resume" style={{padding: "8px"}}>Resume</Link>            
             {currentUser ? 
-            (<button onClick={userSignOut}>Sign out, {currentUser.nickname}</button>)
+            (<button onClick={userSignOut}>Sign out,<span> <b>{currentUser.nickname}</b></span></button>)
              : (<Link to ="/login" style={{padding: "8px"}}>Login</Link>)
              }
         </div>

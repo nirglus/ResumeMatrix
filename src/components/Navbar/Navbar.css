@@ -17,8 +17,29 @@ nav a{
     text-decoration: none;
     color: var(--darkGray);
     padding: 0 5px;
+    transition: 0.3s;
 }
 nav a:hover{
     color: var(--green);
     cursor: pointer;
+}
+nav button{
+    border: 2px solid var(--green);
+    background-color: var(--green);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+nav button span{
+    font-style: italic;
+}
+nav button:hover{
+    background-color: transparent;
+    border: var(--green) solid 2px;
+    color: var(--darkGray);
+    cursor: pointer;
+}
+nav button:hover span{
+    color: var(--green);
 }
