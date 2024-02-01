@@ -43,3 +43,15 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus{
     transition: background-color 600000s 0s, color 600000s 0s;
 }
+input, textarea{
+    margin-bottom: 10px;
+    margin-top: 3px;
+    border: 0;
+    outline: none;
+    transition: 0.3s;
+    border-bottom: 2px solid var(--darkGreen);
+    background-color: transparent;
+}
+input:focus, textarea:focus{
+    box-shadow: 0 16px 11px -16px var(--darkGreen);
+}

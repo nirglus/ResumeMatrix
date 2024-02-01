@@ -6,6 +6,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "fire
 import Login from "../../components/Login"
 import SignUp from "../../components/SignUp"
 import { UserContext } from "../../context/User"
+import "./Auth.css";
 
 function Auth() {
     const [isLoginMode, setIsLoginMode] = useState(true);
