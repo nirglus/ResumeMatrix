@@ -10,7 +10,29 @@ body{
     margin: 0;
     padding: 0;
 }
-button{
+button, .download{
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    background-color: var(--green);
+    font-weight: 500;
+    border: 0;
+    box-shadow: 0 5px 17px -2px #5b5b5b;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+button:hover, .download:hover{
+    background-color: var(--darkGreen);
+    transform: translateY(-5px);
+}
+button:active, .download:active{
+    transform: translateY(0);
+}
+.download{
+    height: 80px;
+    width: 300px;
+    font-size: 20px;
+    display: grid;
+    place-content: center;
 }

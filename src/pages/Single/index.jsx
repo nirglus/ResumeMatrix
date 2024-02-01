@@ -52,7 +52,7 @@ function Single() {
           <DisplayCard resumeData={resumeData} />
         </div>
       ): null}
-      <button onClick={downloadPDF}>Download PDF</button>
+      <button className="download" onClick={downloadPDF}>Download PDF</button>
     </div>
   )
 }

@@ -14,7 +14,7 @@ function Home() {
           <li>Create your winning resume in just 15 minutes</li>
         </ul>
         {user? (
-        <Link to="/resume">Create a resume!</Link>) : (<Link to="/login">Try it out!</Link>)}
+        <Link className="download" to="/resume">Create a resume!</Link>) : (<Link className="download" to="/login">Try it out!</Link>)}
       </div>
   )
 }

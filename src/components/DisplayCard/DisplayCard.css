@@ -1,7 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 .resumeDisplay{
-    width: 100%;
+    width: 21cm;
     height: 29.7cm;
     display: grid;
     grid-template-columns: 1fr 2fr;

@@ -1,0 +1,24 @@
+.resumesDisplay{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    place-content: center;
+    padding: 50px 0;
+}
+.singleResumeDisp .resumeDisplay{
+    height: 423px;
+    width: 300px;
+    padding: 0;
+    font-size: 7px;
+}
+.singleResumeDisp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.singleResumeDisp .download{
+    height: 50px;
+    width: 150px;
+}

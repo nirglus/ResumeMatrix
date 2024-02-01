@@ -11,9 +11,9 @@
 .singlePage button{
     height: 80px;
     width: 300px;
+    font-size: 20px;
     border-radius: 10px;
     background-color: var(--green);
-    font-size: 20px;
     font-weight: 500;
     border: 0;
     box-shadow: 0 5px 17px -2px #5b5b5b;

@@ -4,6 +4,7 @@ import { collection, getDocs, query, where } from "firebase/firestore"
 import { Link } from "react-router-dom"
 import { UserContext } from "../../context/User"
 import DisplayCard from "../DisplayCard";
+import "./Display.css";
 
 function Display() {
   const {user, submitedResume, setSubmitedResume} = useContext(UserContext);
@@ -38,12 +39,12 @@ function Display() {
 
 
   return (
-    <div>
+    <div className="resumesDisplay">
       {userResumes.map((resume, index) =>{
         return (
           <div className="singleResumeDisp" key={index}>
             <DisplayCard resumeData={resume}/>
-            <Link to={`/resumes/${resume.id}`}>View Resume</Link>
+            <Link className="download" to={`/resumes/${resume.id}`}>View Resume</Link>
           </div>
         )
       })}
