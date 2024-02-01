@@ -5,4 +5,38 @@ footer{
     display: grid;
     place-content: center;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.topFooter{
+    display: flex;
+    justify-content: space-between;
+}
+.topFooter *{
+    flex-grow: 1;
+}
+.products{
+    display: flex;
+    flex-direction: column;
+}
+.products a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+.bottomFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #b0b0b0;
+    border-top: #b0b0b0 2px solid;
+}
+.icons i{
+    margin: 0 3px;
+    transition: 0.3s;
+}
+.icons i:hover, .products a:hover{
+    color: rgb(188, 253, 188);
+    cursor: pointer;
 }
