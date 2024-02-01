@@ -22,7 +22,4 @@
     height: 50px;
     width: 150px;
     font-size: 1em;
-    display: flex;
-    align-items: center;
-    gap: 3px;
 }
