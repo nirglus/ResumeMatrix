@@ -6,6 +6,7 @@ import { db } from "../../config/firebaseConfig";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import "./Single.css";
 
 function Single() {
@@ -49,7 +50,10 @@ function Single() {
     <div className="singlePage">
       {resumeData ? (
         <>
+        <div className="singleBtns">
           <button className="download" onClick={downloadPDF}>Download PDF <i class="bi bi-download"></i></button>
+          <Link className="download" to="/resume">Back to resumes <i class="bi bi-arrow-return-left"></i></Link>
+        </div>
           <div ref={pdfRef} className="pdfContainer"> 
             <DisplayCard resumeData={resumeData} />
           </div>

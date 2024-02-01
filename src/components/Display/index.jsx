@@ -39,7 +39,7 @@ function Display() {
 
 
   return (
-    <div className="resumesDisplay">
+    <div className="resumesDisplay" >
       {userResumes.map((resume, index) =>{
         return (
           <div className="singleResumeDisp" key={index}>

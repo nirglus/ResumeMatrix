@@ -36,3 +36,7 @@
 .singlePage .resumeDisplay{
     background-color: #fff;
 }
+.singleBtns{
+    display: flex;
+    gap: 10px;
+}
