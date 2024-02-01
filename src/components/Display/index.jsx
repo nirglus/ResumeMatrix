@@ -44,7 +44,7 @@ function Display() {
         return (
           <div className="singleResumeDisp" key={index}>
             <DisplayCard resumeData={resume}/>
-            <Link className="download" to={`/resumes/${resume.id}`}>View Resume</Link>
+            <Link className="download" to={`/resumes/${resume.id}`}>View Resume <i class="bi bi-binoculars"></i></Link>
           </div>
         )
       })}

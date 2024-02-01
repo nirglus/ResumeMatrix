@@ -90,11 +90,11 @@ return (
 
                     <label>Till year:</label>
                     <input type="number" value={experience.till} onChange={(e) => handleInputChange(e, index, 'till', 'workExperience')} min={minimumInput} max={currentYear} required />
-                    <button className="removeBtn" onClick={() => removeField(index, "workExperience")}>Remove -</button>
+                    <button className="removeBtn" onClick={() => removeField(index, "workExperience")}>Remove <i class="bi bi-trash3"></i></button>
                 </div>
             ))}
         </div>
-        <button className="addBtn" type="button" onClick={() => addField('workExperience')}>Add Experience +</button>
+        <button className="addBtn" type="button" onClick={() => addField('workExperience')}>Add Experience <i class="bi bi-plus-circle-dotted"></i></button>
 
         <div className="formHeading">
             <div className="numberDiv">3</div>
@@ -112,13 +112,13 @@ return (
 
                     <label>Till year:</label>
                     <input type="number" value={education.till} onChange={(e) => handleInputChange(e, index, 'till', 'education')} min={minimumInput} max={currentYear} required />
-                    <button className="removeBtn"  onClick={() => removeField(index, "education")}>Remove -</button>
+                    <button className="removeBtn"  onClick={() => removeField(index, "education")}>Remove <i class="bi bi-trash3"></i></button>
                 </div>
             ))}
         </div>
-        <button className="addBtn" type="button" onClick={() => addField('education')}>Add Education +</button>
+        <button className="addBtn" type="button" onClick={() => addField('education')}>Add Education <i class="bi bi-plus-circle-dotted"></i></button>
 
-        <button className="submitBtn" type="submit">Save Resume</button>
+        <button className="submitBtn" type="submit">Save Resume <i class="bi bi-floppy"></i></button>
     </form>
 );
 }
