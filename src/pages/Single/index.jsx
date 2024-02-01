@@ -48,9 +48,12 @@ function Single() {
   return (
     <div className="singlePage">
       {resumeData ? (
-        <div ref={pdfRef} className="pdfContainer"> 
-          <DisplayCard resumeData={resumeData} />
-        </div>
+        <>
+          <button className="download" onClick={downloadPDF}>Download PDF <i class="bi bi-download"></i></button>
+          <div ref={pdfRef} className="pdfContainer"> 
+            <DisplayCard resumeData={resumeData} />
+          </div>
+        </>
       ): null}
       <button className="download" onClick={downloadPDF}>Download PDF <i class="bi bi-download"></i></button>
     </div>

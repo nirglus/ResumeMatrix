@@ -57,3 +57,6 @@ input, textarea{
 input:focus, textarea:focus{
     box-shadow: 0 16px 11px -16px var(--darkGreen);
 }
+.logoImage{
+    width: 30px;
+}

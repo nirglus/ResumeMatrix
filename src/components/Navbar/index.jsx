@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { UserContext } from "../../context/User"
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
 import "./Navbar.css";
 
 function Navbar() {
@@ -8,7 +9,7 @@ function Navbar() {
   return (
     <nav>
         <div className="logo">
-            {/* <img src={logoItem} alt="ResumeMatrix-Logo" /> */}
+            <img className="logoImage" src={logo} alt="ResumeMatrix-Logo" />
             <h1>Resume<span className="matrix">Matrix</span></h1>
         </div>
         <div className="navItems">
