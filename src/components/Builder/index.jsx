@@ -49,9 +49,12 @@ const removeField = (itemIndex, field) =>{
 
 return (
     <form className="createForm" onSubmit={handleSubmit}>
-        <h1>Let's create a resume!</h1>
-
-        <h2>Personal Details</h2>
+        <h1>Let's <span className="matrix">create</span> a resume!</h1>
+         
+         <div className="formHeading">
+            <div className="numberDiv">1</div>
+            <h2>Personal Details</h2>
+         </div>
         <div className="personalInputs">
           <label htmlFor="fullName">Full Name:</label>
           <input type="text" id="fullName" name="fullName" value={resumeData.fullName} onChange={(e) => setResumeData({ ...resumeData, fullName: e.target.value })} required />
@@ -69,7 +72,10 @@ return (
           <input type="email" id="email" name="email" value={resumeData.email} onChange={(e) => setResumeData({ ...resumeData, email: e.target.value })} required />
         </div>
 
-        <h2>Work Experience</h2>
+        <div className="formHeading">
+            <div className="numberDiv">2</div>
+            <h2>Work Experience</h2>
+        </div>
         <div className="workExpSection">
             {resumeData.workExperience.map((experience, index) => (
                 <div key={index} className="workExpInputs">
@@ -84,13 +90,17 @@ return (
 
                     <label>Till year:</label>
                     <input type="number" value={experience.till} onChange={(e) => handleInputChange(e, index, 'till', 'workExperience')} min={minimumInput} max={currentYear} required />
-                    <button onClick={() => removeField(index, "workExperience")}>Remove -</button>
+                    <button className="removeBtn" onClick={() => removeField(index, "workExperience")}>Remove -</button>
                 </div>
             ))}
         </div>
-        <button type="button" onClick={() => addField('workExperience')}>Add Experience</button>
+        <button className="addBtn" type="button" onClick={() => addField('workExperience')}>Add Experience +</button>
 
-        <h2>Education</h2>
+        <div className="formHeading">
+            <div className="numberDiv">3</div>
+            <h2>Education</h2>
+        </div>
+        
         <div className="educationSection">
             {resumeData.education.map((education, index) => (
                 <div key={index} className="educationInputs">
@@ -102,13 +112,13 @@ return (
 
                     <label>Till year:</label>
                     <input type="number" value={education.till} onChange={(e) => handleInputChange(e, index, 'till', 'education')} min={minimumInput} max={currentYear} required />
-                    <button onClick={() => removeField(index, "education")}>Remove -</button>
+                    <button className="removeBtn"  onClick={() => removeField(index, "education")}>Remove -</button>
                 </div>
             ))}
         </div>
-        <button type="button" onClick={() => addField('education')}>Add Education</button>
+        <button className="addBtn" type="button" onClick={() => addField('education')}>Add Education +</button>
 
-        <button type="submit">Save Resume</button>
+        <button className="submitBtn" type="submit">Save Resume</button>
     </form>
 );
 }
