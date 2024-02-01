@@ -13,11 +13,11 @@ function Navbar() {
             <h1>Resume<span className="matrix">Matrix</span></h1>
         </div>
         <div className="navItems">
-            <Link to="/">Home</Link>
-            <Link to="/resume">Resume</Link>            
+            <Link to="/"><i class="bi bi-house"></i> Home</Link>
+            <Link to="/resume"><i class="bi bi-file-earmark-person"></i> Resume</Link>            
             {currentUser ? 
-            (<button onClick={userSignOut}>Sign out,<span> <b>{currentUser.nickname}</b></span></button>)
-             : (<Link to ="/login">Login</Link>)
+            (<button onClick={userSignOut}><i class="bi bi-box-arrow-right"></i> Sign out,<span> <b>{currentUser.nickname}</b></span></button>)
+             : (<Link to ="/login"><i class="bi bi-box-arrow-in-right"></i> Login</Link>)
              }
         </div>
     </nav>
