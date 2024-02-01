@@ -3,6 +3,7 @@ import { currentYear, minimumInput } from "../../helpers/dates";
 import { db } from "../../config/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import { UserContext } from "../../context/User";
+import "./Builder.css";
 
 function Builder() {
 
@@ -47,7 +48,8 @@ const removeField = (itemIndex, field) =>{
 }
 
 return (
-    <form onSubmit={handleSubmit}>
+    <form className="createForm" onSubmit={handleSubmit}>
+        <h1>Let's create a resume!</h1>
 
         <h2>Personal Details</h2>
         <div className="personalInputs">
@@ -68,9 +70,9 @@ return (
         </div>
 
         <h2>Work Experience</h2>
-        <div className="workExpInputs">
+        <div className="workExpSection">
             {resumeData.workExperience.map((experience, index) => (
-                <div key={index}>
+                <div key={index} className="workExpInputs">
                     <label>Company Name:</label>
                     <input type="text" value={experience.companyName} onChange={(e) => handleInputChange(e, index, 'companyName', 'workExperience')} required />
 
@@ -78,10 +80,10 @@ return (
                     <input type="text" value={experience.role} onChange={(e) => handleInputChange(e, index, 'role', 'workExperience')} required />
 
                     <label>From year:</label>
-                    <input type="text" value={experience.from} onChange={(e) => handleInputChange(e, index, 'from', 'workExperience')} min={minimumInput} max={currentYear} required />
+                    <input type="number" value={experience.from} onChange={(e) => handleInputChange(e, index, 'from', 'workExperience')} min={minimumInput} max={currentYear} required />
 
                     <label>Till year:</label>
-                    <input type="text" value={experience.till} onChange={(e) => handleInputChange(e, index, 'till', 'workExperience')} min={minimumInput} max={currentYear} required />
+                    <input type="number" value={experience.till} onChange={(e) => handleInputChange(e, index, 'till', 'workExperience')} min={minimumInput} max={currentYear} required />
                     <button onClick={() => removeField(index, "workExperience")}>Remove -</button>
                 </div>
             ))}
@@ -89,9 +91,9 @@ return (
         <button type="button" onClick={() => addField('workExperience')}>Add Experience</button>
 
         <h2>Education</h2>
-        <div className="educationInputs">
+        <div className="educationSection">
             {resumeData.education.map((education, index) => (
-                <div key={index}>
+                <div key={index} className="educationInputs">
                     <label>What you learned:</label>
                     <input type="text" value={education.learned} onChange={(e) => handleInputChange(e, index, 'learned', 'education')} required />
 
