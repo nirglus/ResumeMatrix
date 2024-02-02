@@ -37,6 +37,7 @@ button:active, .download:active{
     align-items: center;
     justify-content: center;
     gap: 5px;
+    padding: 5px 0;
 }
 input[data-autocompleted]{
     background-color: transparent !important;
