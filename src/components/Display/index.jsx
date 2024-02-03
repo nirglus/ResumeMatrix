@@ -40,14 +40,24 @@ function Display() {
 
   return (
     <div className="resumesDisplay" >
-      {userResumes.map((resume, index) =>{
-        return (
-          <div className="singleResumeDisp" key={index}>
-            <DisplayCard resumeData={resume}/>
-            <Link className="download" to={`/resumes/${resume.id}`}>View Resume <i class="bi bi-binoculars"></i></Link>
-          </div>
-        )
-      })}
+      {userResumes.length > 0 ?
+      (
+        <>
+        {userResumes.map((resume, index) =>{
+          return (
+            <div className="singleResumeDisp" key={index}>
+              <DisplayCard resumeData={resume}/>
+              <Link className="download" to={`/resumes/${resume.id}`}>View Resume <i class="bi bi-binoculars"></i></Link>
+            </div>
+          )
+        })}
+        </> 
+      ) : (
+        <div className="loading">
+          <img src="https://media.tenor.com/t5DMW5PI8mgAAAAj/loading-green-loading.gif" alt="loading" />
+       </div>
+      )
+      }
     </div>
   )
 }
