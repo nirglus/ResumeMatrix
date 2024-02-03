@@ -11,6 +11,7 @@ import "./Auth.css";
 function Auth() {
     const [isLoginMode, setIsLoginMode] = useState(true);
     const [formData, setFormData] = useState({});
+    const [isLoading, setIsLoading] = useState(false);
     const {user, setUser} = useContext(UserContext);
     
     const handleToggle = () =>{
@@ -32,6 +33,7 @@ function Auth() {
 
     const submitHandler = async(e) =>{
         e.preventDefault();
+        setIsLoading(true);
         try{
             let userCard;
             if(isLoginMode) {
@@ -46,11 +48,18 @@ function Auth() {
              window.location.href = '/';
              } catch (error) {
               console.error("Error: ", error.message);
+             } finally{
+                setIsLoading(false);
              }
         }
      
      return (
         <div className="authCont">
+            {isLoading && 
+                    <div className="loading">
+                        <img src="https://media.tenor.com/t5DMW5PI8mgAAAAj/loading-green-loading.gif" alt="loading" />
+                    </div>
+            }
             {
                 isLoginMode ?
                     <Login submitHandler={submitHandler} changeHandler={changeHandler} />
