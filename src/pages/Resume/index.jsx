@@ -9,7 +9,7 @@ import "./Resume.css";
 function Resume() {
   const {user} = useContext(UserContext);
   return (
-    <div>
+    <div className='resume'>
       {user ? (
         <>
           <Builder/>
