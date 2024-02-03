@@ -57,9 +57,14 @@ function Single() {
           <div ref={pdfRef} className="pdfContainer"> 
             <DisplayCard resumeData={resumeData} />
           </div>
+          <button className="download" onClick={downloadPDF}>Download PDF <i class="bi bi-download"></i></button>
         </>
-      ): null}
-      <button className="download" onClick={downloadPDF}>Download PDF <i class="bi bi-download"></i></button>
+      ): (
+        <div className="loading">
+          <img src="https://media.tenor.com/t5DMW5PI8mgAAAAj/loading-green-loading.gif" alt="loading" />
+        </div>
+      )}
+      
     </div>
   )
 }
