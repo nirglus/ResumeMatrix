@@ -37,8 +37,8 @@
 .resumeBtns button{
     height: 50px;
     width: 50px;
-    background-color: rgb(179, 9, 9);
+    background-color: var(--removeBtn);
 }
 .resumeBtns button:hover, .resumeBtns button:active{
-    background-color: rgb(116, 27, 27);
+    background-color: var(--removeBtnHvr);
 }

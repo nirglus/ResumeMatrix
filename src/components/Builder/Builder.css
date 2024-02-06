@@ -46,10 +46,10 @@
     height: 30px;
 }
 .removeBtn{
-    background-color: rgb(179, 9, 9);
+    background-color: var(--removeBtn);
 }
 .removeBtn:hover, .removeBtn:active{
-    background-color: rgb(116, 27, 27);
+    background-color: var(--removeBtnHvr);
 }
 .submitBtn{
     height: 50px;
