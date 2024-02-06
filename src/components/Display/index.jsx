@@ -1,6 +1,6 @@
 import { db } from "../../config/firebaseConfig"
 import { useState, useContext, useEffect } from "react"
-import { collection, getDocs, query, where } from "firebase/firestore"
+import { collection, doc, deleteDoc, getDocs, query, where } from "firebase/firestore"
 import { Link } from "react-router-dom"
 import { UserContext } from "../../context/User"
 import DisplayCard from "../DisplayCard";
@@ -28,7 +28,20 @@ function Display() {
     } catch (error) {
         console.error("Can not fetch to the db: ", error);
     }
-};
+
+  };
+  
+  const removeResume = async(resumeID) =>{
+    console.log({resumeID});
+    try {
+      await deleteDoc(doc(db, "resumes", resumeID));
+      console.log(`Resume ${resumeID} has been deleted`);
+      setUserResumes(userResumes.filter((resume) => resume.id !== resumeID));
+    } catch (error) {
+      console.error("Could not delete resume: ", error);
+    }
+  }
+  
   useEffect(() =>{
     console.log('User is activated in display', {user});
     if(user && user.id){
@@ -39,29 +52,33 @@ function Display() {
 
 
   return (
-    <div className="resumesDisplay" >
+    <>
       {userResumes.length > 0 ?
       (
-        <>
+        <div className="resumesDisplay" >
         {userResumes.map((resume, index) =>{
           return (
-            <div className="singleResumeDisp" key={index}>
+            <div className="singleResumeDisp" key={resume.id}>
               <DisplayCard resumeData={resume}/>
               <div className="resumeBtns">
                 <Link className="download" to={`/resumes/${resume.id}`}>View Resume <i class="bi bi-binoculars"></i></Link>
-                <button><i class="bi bi-trash3"></i></button>
+                <button onClick={() => removeResume(resume.id)}><i class="bi bi-trash3"></i></button>
               </div>
             </div>
           )
         })}
-        </> 
+        </div> 
+      ) : userResumes.length === 0 ? (
+        <div className="noResumeDisp">
+          <h1>No <span className="matrix">resumes</span> to display <span className="matrix">yet</span>!</h1>
+        </div>
       ) : (
         <div className="loading">
           <img src="https://media.tenor.com/t5DMW5PI8mgAAAAj/loading-green-loading.gif" alt="loading" />
        </div>
       )
       }
-    </div>
+    </>
   )
 }
 

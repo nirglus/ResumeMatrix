@@ -42,3 +42,8 @@
 .resumeBtns button:hover, .resumeBtns button:active{
     background-color: var(--removeBtnHvr);
 }
+.noResumeDisp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
