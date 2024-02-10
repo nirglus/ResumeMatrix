@@ -30,7 +30,7 @@ function DisplayCard({resumeData}) {
                     experience.skills ?
                     (
                       <ul>
-                      <li>{experience.skills[index]}</li>
+                      <li>{experience.skills[0]}</li>
                     </ul>
                     ) : null}
                   
