@@ -14,21 +14,26 @@ function Builder() {
     aboutMe: '',
     phone: '',
     email: '',
-    workExperience: [{ companyName: '', role: '', timeFrame: '' }],
+    workExperience: [{ companyName: '', role: '', timeFrame: '', skills: ['']}],
     education: [{ learned: '', educationTimeFrame: '' }]
 });
 
-const handleInputChange = (e, index, field, section) => {
+const handleInputChange = (e, index, field, section, fieldIndex) => {
     const { name, value } = e.target;
     const data = [...resumeData[section]];
-    data[index][field] = value;
+    if(fieldIndex){
+        data[index][field][fieldIndex] = value;
+    }else{
+        data[index][field] = value;
+    }
+    
     setResumeData({ ...resumeData, [section]: data });
 };
 
 const addField = (section) => {
     setResumeData({
         ...resumeData,
-        [section]: [...resumeData[section], { companyName: '', role: '', timeFrame: '' }]
+        [section]: [...resumeData[section], {}]
     });
 };
 
@@ -90,6 +95,10 @@ return (
 
                     <label>Till year:</label>
                     <input type="number" value={experience.till} onChange={(e) => handleInputChange(e, index, 'till', 'workExperience')} min={minimumInput} max={currentYear} required />
+
+                    <label htmlFor="skill">Skill:</label>
+                    <input type="text" value={experience.skills[index]} onChange={(e) => handleInputChange(e, index, 'skills', 'workExperience', '0')} required />
+
                     <button className="removeBtn" onClick={() => removeField(index, "workExperience")}>Remove <i class="bi bi-trash3"></i></button>
                 </div>
             ))}

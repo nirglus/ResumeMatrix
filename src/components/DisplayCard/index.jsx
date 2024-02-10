@@ -26,6 +26,14 @@ function DisplayCard({resumeData}) {
                 <div key={index}>
                   <p className="workPlaceDisp">{experience.role} at {experience.companyName}</p>
                   <p className="workPlaceTimeDisp">{experience.from} - {experience.till}</p>
+                  {
+                    experience.skills ?
+                    (
+                      <ul>
+                      <li>{experience.skills[index]}</li>
+                    </ul>
+                    ) : null}
+                  
                 </div>
               ))}
             </div>
