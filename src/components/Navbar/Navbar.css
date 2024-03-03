@@ -65,13 +65,13 @@ nav .hamburger .line{
     border-radius: 3px;
 }
 
-.navItems ul{
+.myNavItems ul{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.navItems ul li{
+.myNavItems ul li{
     list-style: none;
 }
 
@@ -90,7 +90,7 @@ nav .hamburger .line{
     nav{
         z-index: 9999;
     }
-    .navItems ul {
+    .myNavItems ul {
         display: none;
         flex-direction: column;
         padding: 10px;
@@ -103,11 +103,11 @@ nav .hamburger .line{
         box-shadow: 0 15px 19px -20px #3d483e99;
       }
 
-      .navItems.active ul{
+      .myNavItems.active ul{
         display: flex;
         animation: slideIn 0.5s ease forwards;
       }
-      .navItems .hamburger {
+      .myNavItems .hamburger {
         display: flex;
       }
 }

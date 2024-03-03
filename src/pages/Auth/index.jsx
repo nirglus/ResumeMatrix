@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect } from "react"
 import { auth } from "../../config/firebaseConfig"
 import { db } from "../../config/firebaseConfig"
 import { setDoc, doc } from "firebase/firestore"
@@ -52,8 +52,12 @@ function Auth() {
                 setIsLoading(false);
              }
         }
+
+    useEffect(() => {
+         window.scrollTo(0, 0); 
+    }, []);
      
-     return (
+    return (
         <div className="authCont">
             {isLoading && 
                     <div className="loading">

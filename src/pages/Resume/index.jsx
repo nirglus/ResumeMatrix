@@ -2,12 +2,17 @@ import React from 'react'
 import Builder from '../../components/Builder'
 import Display from '../../components/Display'
 import { UserContext } from '../../context/User'
-import { useContext } from 'react'
+import { useContext,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import "./Resume.css";
 
 function Resume() {
   const {user} = useContext(UserContext);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+  
   return (
     <div className='resume'>
       {user ? (

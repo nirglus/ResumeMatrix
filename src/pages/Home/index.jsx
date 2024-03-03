@@ -1,9 +1,14 @@
 import "./Home.css";
 import { UserContext } from "../../context/User";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 function Home() {
   const {user} = useContext(UserContext);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+  
   return (
     <div className="homeTop">
         <h1>Crafting the <span className="matrix">perfect</span> resume is now <span className="matrix">easier</span> than ever!</h1>
