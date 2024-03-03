@@ -47,6 +47,14 @@
     align-items: center;
     justify-content: center;
 }
+.display .contactDisp p{
+    color: #c6c7c6;
+    font-size: 4px;
+}
+.display .contactDisp i{
+    font-size: 4px;
+}
+
 
 @media (min-width: 650px) and (max-width: 1000px){
     .resumesDisplay{

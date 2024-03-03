@@ -87,6 +87,9 @@ nav .hamburger .line{
   }
 
 @media (max-width: 800px){
+    nav{
+        z-index: 9999;
+    }
     .navItems ul {
         display: none;
         flex-direction: column;

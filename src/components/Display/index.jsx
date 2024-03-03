@@ -52,7 +52,7 @@ function Display() {
 
 
   return (
-    <>
+    <div className="display">
       {userResumes.length > 0 ?
       (
         <div className="resumesDisplay" >
@@ -78,7 +78,7 @@ function Display() {
        </div>
       )
       }
-    </>
+    </div>
   )
 }
 

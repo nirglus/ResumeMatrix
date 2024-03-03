@@ -2,12 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 20px;
     gap: 20px;
     background-image: var(--bgPattern);
+    min-height: 100vh;
 }
 .singlePage button{
     height: 80px;
@@ -29,9 +27,11 @@
 .singlePage button:active{
     transform: translateY(0);
 }
-.pdfContainer{
+.singlePage .pdfContainer{
     width: 21cm;
     height: 29.7cm;
+    
+
 }
 .singlePage .resumeDisplay{
     background-color: #fff;
@@ -39,5 +39,46 @@
 .singleBtns{
     display: flex;
     gap: 10px;
+}
+
+@media (min-width: 575px) and (max-width: 768px){
+    .singlePage .pdfContainer{
+        transform: scale(0.7);
+    }
+}
+
+@media (min-width: 400px) and (max-width: 575px){
+
+     .singlePage{
+        position: relative;
+        gap: 700px;
+     }
+     .singlePage .pdfContainer{
+        transform: scale(0.5);
+        position: absolute;
+        top: -133px;
+    }
+     .singlePage button, .singlePage a{
+        width: 150px;
+        height: 60px;
+        font-size: 1em;
+    }
+}
+@media (min-width: 320px) and (max-width: 400px){
+
+    .singlePage{
+       position: relative;
+       gap: 700px;
+    }
+    .singlePage .pdfContainer{
+       transform: scale(0.4);
+       position: absolute;
+       top: -133px;
+   }
+    .singlePage button, .singlePage a{
+        width: 150px;
+        height: 60px;
+       font-size: 1em;
+   }
 }
 

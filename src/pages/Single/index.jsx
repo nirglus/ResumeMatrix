@@ -57,7 +57,7 @@ function Single() {
           <div ref={pdfRef} className="pdfContainer"> 
             <DisplayCard resumeData={resumeData} />
           </div>
-          <button className="download" onClick={downloadPDF}>Download PDF <i class="bi bi-download"></i></button>
+          <button className="download bottom" onClick={downloadPDF}>Download PDF <i class="bi bi-download"></i></button>
         </>
       ): (
         <div className="loading">
