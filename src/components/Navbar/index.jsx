@@ -39,6 +39,8 @@ function Navbar() {
             </Link>
           </li>
           {currentUser ? (
+            <>
+            <li><Link to={`/account/${currentUser.id}`}><i class="bi bi-list-stars"></i> My Resumes</Link></li>
             <li>
               <button onClick={userSignOut}>
                 <i class="bi bi-box-arrow-right"></i> Sign out,
@@ -48,6 +50,7 @@ function Navbar() {
                 </span>
               </button>
             </li>
+            </>
           ) : (
             <li>
               <Link to="/login">

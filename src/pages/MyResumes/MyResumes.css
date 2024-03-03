@@ -1,0 +1,12 @@
+.myResumes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: var(--bgPattern);
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.myResumes .resumeDisplay{
+    background-color: #fff;
+}

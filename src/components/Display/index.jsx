@@ -9,6 +9,7 @@ import "./Display.css";
 function Display() {
   const {user, submitedResume, setSubmitedResume} = useContext(UserContext);
   const [userResumes, setUserResumes] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getResumes = async (currentUser) => {
     const q = query(collection(db, "resumes"), where("userID", "==", currentUser));
@@ -24,6 +25,7 @@ function Display() {
 
         setUserResumes(newResumes);
         setSubmitedResume(false);
+        setIsLoading(false);
         console.log({ userResumes });
     } catch (error) {
         console.error("Can not fetch to the db: ", error);
@@ -50,11 +52,13 @@ function Display() {
  
   },[user, submitedResume])
 
-
-  return (
+  return(
     <div className="display">
-      {userResumes.length > 0 ?
-      (
+    {isLoading ? (
+        <div className="loading">
+            <img src="https://media.tenor.com/t5DMW5PI8mgAAAAj/loading-green-loading.gif" alt="loading" />
+        </div>
+    ) : userResumes.length > 0 ? (
         <div className="resumesDisplay" >
         {userResumes.map((resume, index) =>{
           return (
@@ -68,17 +72,12 @@ function Display() {
           )
         })}
         </div> 
-      ) : userResumes.length === 0 ? (
+    ) : (
         <div className="noResumeDisp">
-          <h1>No <span className="matrix">resumes</span> to display <span className="matrix">yet</span>!</h1>
+            <h1>No resumes to display yet!</h1>
         </div>
-      ) : (
-        <div className="loading">
-          <img src="https://media.tenor.com/t5DMW5PI8mgAAAAj/loading-green-loading.gif" alt="loading" />
-       </div>
-      )
-      }
-    </div>
+    )}
+</div>
   )
 }
 

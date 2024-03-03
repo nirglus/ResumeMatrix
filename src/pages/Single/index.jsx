@@ -1,7 +1,8 @@
 import DisplayCard from "../../components/DisplayCard"
 import { doc, getDoc } from "firebase/firestore";
-import { useParams } from "react-router-dom"
-import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { UserContext } from "../../context/User";
+import { useState, useEffect, useContext } from "react";
 import { db } from "../../config/firebaseConfig";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
@@ -13,6 +14,7 @@ function Single() {
   
   let {id: resumeID} = useParams(); 
   const [resumeData, setResumeData] = useState();
+  const {currentUser} = useContext(UserContext);
   const pdfRef = useRef();
   const downloadPDF = () =>{
     const input = pdfRef.current;
@@ -50,14 +52,14 @@ function Single() {
   useEffect(() => {
     window.scrollTo(0, 0); 
   }, []);
-  
+
   return (
     <div className="singlePage">
       {resumeData ? (
         <>
         <div className="singleBtns">
           <button className="download" onClick={downloadPDF}>Download PDF <i class="bi bi-download"></i></button>
-          <Link className="download" to="/resume">Back to resumes <i class="bi bi-arrow-return-left"></i></Link>
+          <Link className="download" to={`/account/${currentUser.id}`}>Back to resumes <i class="bi bi-arrow-return-left"></i></Link>
         </div>
           <div ref={pdfRef} className="pdfContainer"> 
             <DisplayCard resumeData={resumeData} />
