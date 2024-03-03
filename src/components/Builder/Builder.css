@@ -55,3 +55,13 @@
     height: 50px;
     width: 200px;
 }
+
+@media (max-width: 480px){
+    form h1{
+        text-align: center;
+        font-size: 1.9em;
+    }
+    .createForm input, .createForm textarea{
+        width: 280px;
+    }
+}
