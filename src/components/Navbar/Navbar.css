@@ -97,6 +97,7 @@ nav .hamburger .line{
         right: 0px;
         width: 99vw;
         background-color: #fff;
+        animation: slideIn 0.5s ease reverse;
       }
 
       .navItems.active ul{

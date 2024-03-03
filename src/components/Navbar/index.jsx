@@ -11,6 +11,10 @@ function Navbar() {
   const toggleMenu = () =>{
     setIsOpen(!isOpen);
   }
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav>
         <div className="logo">
@@ -24,8 +28,8 @@ function Navbar() {
               <div className="line"></div>
             </div>
             <ul>
-              <li><Link to="/"><i class="bi bi-house"></i> Home</Link></li>
-              <li><Link to="/resume"><i class="bi bi-file-earmark-person"></i> Resume</Link>  </li>
+              <li><Link to="/" onClick={closeMobileMenu}><i class="bi bi-house"></i> Home</Link></li>
+              <li><Link to="/resume" onClick={closeMobileMenu}><i class="bi bi-file-earmark-person"></i> Resume</Link>  </li>
               <li></li>
               <li></li>
                         
