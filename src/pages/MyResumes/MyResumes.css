@@ -10,3 +10,7 @@
 .myResumes .resumeDisplay{
     background-color: #fff;
 }
+
+.myResumes .resumesDisplay{
+    gap: 35px;
+}
