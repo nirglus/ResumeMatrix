@@ -99,11 +99,11 @@ return (
                     <label htmlFor="skill">Skill:</label>
                     <input type="text" value={experience.skills} onChange={(e) => handleInputChange(e, index, 'skills', 'workExperience', '0')} required />
 
-                    <button className="removeBtn" onClick={() => removeField(index, "workExperience")}>Remove <i class="bi bi-trash3"></i></button>
+                    <button className="removeBtn" onClick={() => removeField(index, "workExperience")}>Remove <i className="bi bi-trash3"></i></button>
                 </div>
             ))}
         </div>
-        <button className="addBtn" type="button" onClick={() => addField('workExperience')}>Add Experience <i class="bi bi-plus-circle-dotted"></i></button>
+        <button className="addBtn" type="button" onClick={() => addField('workExperience')}>Add Experience <i className="bi bi-plus-circle-dotted"></i></button>
 
         <div className="formHeading">
             <div className="numberDiv">3</div>
@@ -121,13 +121,13 @@ return (
 
                     <label>Till year:</label>
                     <input type="number" value={education.till} onChange={(e) => handleInputChange(e, index, 'till', 'education')} min={minimumInput} max={currentYear} required />
-                    <button className="removeBtn"  onClick={() => removeField(index, "education")}>Remove <i class="bi bi-trash3"></i></button>
+                    <button className="removeBtn"  onClick={() => removeField(index, "education")}>Remove <i className="bi bi-trash3"></i></button>
                 </div>
             ))}
         </div>
-        <button className="addBtn" type="button" onClick={() => addField('education')}>Add Education <i class="bi bi-plus-circle-dotted"></i></button>
+        <button className="addBtn" type="button" onClick={() => addField('education')}>Add Education <i className="bi bi-plus-circle-dotted"></i></button>
 
-        <button className="submitBtn" type="submit">Save Resume <i class="bi bi-floppy"></i></button>
+        <button className="submitBtn" type="submit">Save Resume <i className="bi bi-floppy"></i></button>
     </form>
 );
 }

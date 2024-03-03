@@ -21,10 +21,10 @@ function Footer() {
           <p>© {currentYear}  ResumeMatrix: All rights reserved</p>
         </div>
         <div className="icons">
-          <i class="bi bi-facebook"></i>
-          <i class="bi bi-whatsapp"></i>
-          <a href="https://github.com/nirglus"><i class="bi bi-github"></i></a>
-          <i class="bi bi-envelope-at-fill"></i>
+          <i className="bi bi-facebook"></i>
+          <i className="bi bi-whatsapp"></i>
+          <a href="https://github.com/nirglus"><i className="bi bi-github"></i></a>
+          <i className="bi bi-envelope-at-fill"></i>
         </div>
       </div>
     </footer>

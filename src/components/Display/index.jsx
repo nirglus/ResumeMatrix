@@ -65,8 +65,8 @@ function Display() {
             <div className="singleResumeDisp" key={resume.id}>
               <DisplayCard resumeData={resume}/>
               <div className="resumeBtns">
-                <Link className="download" to={`/resumes/${resume.id}`}>View Resume <i class="bi bi-binoculars"></i></Link>
-                <button onClick={() => removeResume(resume.id)}><i class="bi bi-trash3"></i></button>
+                <Link className="download" to={`/resumes/${resume.id}`}>View Resume <i className="bi bi-binoculars"></i></Link>
+                <button onClick={() => removeResume(resume.id)}><i className="bi bi-trash3"></i></button>
               </div>
             </div>
           )

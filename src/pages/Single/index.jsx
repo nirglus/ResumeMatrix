@@ -58,13 +58,13 @@ function Single() {
       {resumeData ? (
         <>
         <div className="singleBtns">
-          <button className="download" onClick={downloadPDF}>Download PDF <i class="bi bi-download"></i></button>
-          <Link className="download" to={`/account/${currentUser.id}`}>Back to resumes <i class="bi bi-arrow-return-left"></i></Link>
+          <button className="download" onClick={downloadPDF}>Download PDF <i className="bi bi-download"></i></button>
+          <Link className="download" to={`/account/${currentUser.id}`}>Back to resumes <i className="bi bi-arrow-return-left"></i></Link>
         </div>
           <div ref={pdfRef} className="pdfContainer"> 
             <DisplayCard resumeData={resumeData} />
           </div>
-          <button className="download bottom" onClick={downloadPDF}>Download PDF <i class="bi bi-download"></i></button>
+          <button className="download bottom" onClick={downloadPDF}>Download PDF <i className="bi bi-download"></i></button>
         </>
       ): (
         <div className="loading">

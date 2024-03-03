@@ -8,9 +8,9 @@ function DisplayCard({resumeData}) {
           <div className="decRow"></div>
           <p className="roleDisplay">{resumeData.role}</p>
             <div className="contactDisp">
-              <p><i class="bi bi-telephone"> </i>
+              <p><i className="bi bi-telephone"> </i>
                 {resumeData.phone}</p>
-              <p><i class="bi bi-envelope-at"> </i>
+              <p><i className="bi bi-envelope-at"> </i>
                 {resumeData.email}</p>
             </div>
         </div>
