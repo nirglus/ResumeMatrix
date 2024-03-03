@@ -36,9 +36,16 @@
 }
 .contactDisp{
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 .contactDisp p{
     color: #c6c7c6;
+    font-size: 4px;
+}
+.contactDisp i{
+    font-size: 4px;
 }
 
 .workDisp{
