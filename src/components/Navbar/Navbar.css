@@ -9,12 +9,14 @@
     color: var(--green);
 }
 nav{
+    top: 0;
     display: flex;
     position: sticky;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     border-bottom: 1px solid var(--darkGray);
+    background-color: #fff;
 }
 nav a{
     text-decoration: none;
@@ -72,6 +74,7 @@ nav .hamburger .line{
 .navItems ul li{
     list-style: none;
 }
+
 @keyframes slideIn {
     from {
       opacity: 0;

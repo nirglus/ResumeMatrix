@@ -9,6 +9,7 @@
 }
 .homeTop h1{
     font-size: 2.6em;
+    text-align: center;
 }
 .homeTop ul li{
     margin: 20px 0;
@@ -16,4 +17,13 @@
 }
 .homeTop .download{
     margin-bottom: 30px;
+}
+
+@media (max-width:768px){
+    .homeTop h1{
+        font-size: 2.3em;
+    }
+    .homeTop ul li{
+        font-size: 1.2em;
+    }
 }
