@@ -48,6 +48,7 @@ export default function UserProvider({children}){
         signOut(userAuth)
             .then(() => {
               console.log("Signed out");
+              window.location = "/";
             })
             .catch((error) => {
               console.error("Error signing out: ", error);
