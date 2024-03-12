@@ -17,7 +17,7 @@ ResumeMatrix is a web application that allows users to create and manage their r
 ## Features
 
 - **User Authentication**: Users can sign up, log in, and log out securely.
-- **Resume Creation**: Users can create, edit, and delete their resumes.
+- **Resume Creation**: Users can create, view, and delete their resumes.
 - **Work Experience and Education**: Users can add, update, and remove work experience and education details in their resumes.
 - **Responsive Design**: The application is designed to work seamlessly across various devices.
 
