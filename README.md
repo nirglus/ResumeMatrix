@@ -50,7 +50,7 @@ Open your browser and go to http://localhost:5173 to view the application.
 - React.js: Frontend framework for building user interfaces.
 - Firebase: Backend-as-a-Service platform for user authentication and database management.
 - React Router: Library for declarative routing in React applications.
-HTML/CSS: Markup and styling languages for web development.
+- HTML/CSS: Markup and styling languages for web development.
 
 ## Deployment
 The app is deployed and accessible at https://resumematrix-50ace.web.app/
