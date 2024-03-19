@@ -12,7 +12,7 @@ function Footer() {
         <div className="products">
           <h2>Products</h2>
           <a href="https://nirglus.github.io/Movies-Project/html/index.html">MovieNatic</a>
-          <a href="https://cryptonight-e657d.web.app/">CryptNight</a>
+          <a href="https://world-of-formula.web.app/">World of Formula</a>
           <a href="https://budget-tracker-9040e.web.app/">BudgetBuddy</a>
         </div>
       </div>
