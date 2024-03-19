@@ -17,6 +17,7 @@ nav{
     padding: 0 20px;
     border-bottom: 1px solid var(--darkGray);
     background-color: #fff;
+    z-index: 9999;
 }
 nav a{
     text-decoration: none;
@@ -87,9 +88,6 @@ nav .hamburger .line{
   }
 
 @media (max-width: 800px){
-    nav{
-        z-index: 9999;
-    }
     .myNavItems ul {
         display: none;
         flex-direction: column;
