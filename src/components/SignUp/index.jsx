@@ -9,21 +9,21 @@ function SignUp(props){
                     type="text"
                     name="nickname"
                     placeholder="Enter a username"
-                    required
+                    className={props.hasError ? "invalidInput" : ""}
                 />
                 <input
                     onChange={props.changeHandler}
                     type="email"
                     name="email"
                     placeholder="example123@email.com"
-                    required
+                    className={props.hasError ? "invalidInput" : ""}
                 />
                 <input
                     onChange={props.changeHandler}
                     type="password"
                     name="password"
                     placeholder="Enter your password"
-                    required
+                    className={props.hasError ? "invalidInput" : ""}
                 />
                 <button type="submit">Create Account</button>
             </form>

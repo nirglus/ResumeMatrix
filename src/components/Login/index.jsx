@@ -10,14 +10,16 @@ function Login(props){
                     type="email"
                     name="email"
                     placeholder="example123@email.com"
-                    required
+                    className={props.hasError ? "invalidInput" : ""}
+                
                 />
                 <input
                     onChange={props.changeHandler}
                     type="password"
                     name="password"
                     placeholder="Enter your password"
-                    required
+                    className={props.hasError ? "invalidInput" : ""}
+                
                 />
                 <button type="submit">Sign In</button>
             </form>
