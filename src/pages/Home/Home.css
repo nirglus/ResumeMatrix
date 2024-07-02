@@ -6,6 +6,7 @@
     align-items: center;
     gap: 58px;
     padding: 50px 0;
+    min-height: 100vh;
 }
 .homeTop h1{
     font-size: 2.6em;
