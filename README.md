@@ -1,71 +1,29 @@
-# <img width="30" alt="resumemtrx-logo" src="https://github.com/nirglus/ResumeMatrix/blob/main/src/assets/logo.png"> ResumeMatrix
+# ResumeMatrix
 
-ResumeMatrix is a web application that allows users to create and manage their resumes online.
+ResumeMatrix is a personal web project for building and managing resumes through a simple web interface.
+The project focuses on client-side architecture, state management, and integration with a backend-as-a-service.
 
-<img width="949" alt="resumematrix" src="https://github.com/nirglus/ResumeMatrix/assets/119694737/05ede50c-313d-44ff-afa1-38e8ff80517c">
+## Project Overview
+The application allows users to create, edit, and manage resume content through a browser-based UI.
+Authentication and data persistence are handled using Firebase services.
 
-## 📑 Table of Contents
+## My Contribution
+This is a personal project I built independently, including:
+- Implementing the frontend using React
+- Managing application state and routing
+- Integrating Firebase Authentication
+- Storing and retrieving user data using Firebase services
+- Implementing PDF export functionality
+- Deploying the application to Firebase Hosting
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
+## Tech Stack
+**Frontend:** React, HTML, CSS  
+**Backend / Services:** Firebase (Authentication, Database)  
+**Routing:** React Router  
 
-## ✨ Features
+## Deployment
+The application is deployed and available at:  
+https://resumematrix-50ace.web.app/
 
-- **🔐 User Authentication**: Users can sign up, log in, and log out securely.
-- **📄 Resume Creation**: Users can create, view, and delete their resumes.
-- **🎓 Work Experience and Education**: Users can add, update, and remove work experience and education details in their resumes.
-- **📱 Responsive Design**: The application is designed to work seamlessly across various devices.
-
-## 🛠️ Installation
-
-If you want to run the app locally, follow these steps:
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/nirglus/ResumeMatrix.git
-````
-
-Navigate to the project directory:
-````bash
-cd ResumeMatrix
-````
-Install dependencies:
-````bash
-npm install
-````
-## 🚀 Usage
-Start the development server:
-````bash
-npm run dev
-````
-Open your browser and go to http://localhost:5173 to view the application.
-
-## 🧰 Technologies Used
-- ⚛️ React.js: Frontend framework for building user interfaces.
-- 🔥 Firebase: Backend-as-a-Service platform for user authentication and database management.
-- 🚦 React Router: Library for declarative routing in React applications.
-- 🌐 HTML/CSS: Markup and styling languages for web development.
-
-## 🌍 Deployment
-The app is deployed and accessible at https://resumematrix-50ace.web.app/
-
-## 🤝 Contributing
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
-
-Fork the repository.
-Create a new branch (git checkout -b feature/new-feature).
-Make your changes.
-Commit your changes (git commit -am 'Add new feature').
-Push to the branch (git push origin feature/new-feature).
-Create a new Pull Request.
-
-## 📜 License
-This project is licensed under the MIT License.
-
-`nirglus` `https://resumematrix-50ace.web.app/`
+## Screenshots
+![ResumeMatrix UI](https://github.com/nirglus/ResumeMatrix/assets/119694737/05ede50c-313d-44ff-afa1-38e8ff80517c)
